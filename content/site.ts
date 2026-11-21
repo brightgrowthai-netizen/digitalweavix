@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     'Digital Weavix is a full-service digital marketing, graphic design and printing agency. We create logos, brand identities and packaging, print business cards, flyers and banners, and grow businesses with SEO, social media marketing and Google Ads.',
   logo: '/images/logo-placeholder.svg',
-  ogImage: '/images/hero-studio.png',
+  ogImage: '/images/hero-studio.webp',
   whatsappNumber: '15551234567',
   whatsappDisplay: '+1 (555) 123-4567',
   email: 'hello@digitalweavix.com',

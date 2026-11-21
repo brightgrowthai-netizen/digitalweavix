@@ -49,7 +49,7 @@ export default async function ServicesPage() {
         {services.map((service, index) => (
           <article key={service.slug} className="grid overflow-hidden rounded-3xl border border-border bg-card lg:grid-cols-2">
             <div className={`relative aspect-[16/10] lg:aspect-auto ${index % 2 ? 'lg:order-2' : ''}`}>
-              <Image src={service.heroImage} alt={service.heroAlt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+              <Image src={service.heroImage} alt={service.heroAlt} title={`${service.name} by Digital Weavix`} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
             <div className="p-8 md:p-12">
               <span className="flex size-12 items-center justify-center rounded-xl bg-accent text-accent-foreground">

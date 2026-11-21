@@ -22,7 +22,7 @@ export const printing: Service = {
     'custom t-shirt printing',
     'same day printing',
   ],
-  heroImage: '/images/printing-hero.png',
+  heroImage: '/images/printing-hero.webp',
   heroAlt: 'Commercial offset printing press with orange and navy ink rollers and freshly printed sheets',
   quickAnswer:
     'Digital Weavix offers commercial and digital printing for business cards, flyers, brochures, banners, signage, stickers, labels, packaging and branded merchandise. Every order includes a free pre-press file check, color-accurate proofs and fast delivery.',

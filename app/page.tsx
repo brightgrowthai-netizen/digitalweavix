@@ -104,8 +104,9 @@ export default async function HomePage() {
           <div className="relative">
             <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
               <Image
-                src="/images/hero-studio.png"
+                src="/images/hero-studio.webp"
                 alt="Digital Weavix creative studio with brand designs, printed materials and marketing dashboards"
+                title="Digital Weavix | Digital Marketing, Graphic Design & Printing Agency"
                 fill
                 priority
                 sizes="(min-width: 1024px) 45vw, 100vw"
@@ -144,6 +145,7 @@ export default async function HomePage() {
                     <Image
                       src={service.heroImage}
                       alt={service.heroAlt}
+                      title={`${service.name} by Digital Weavix`}
                       fill
                       sizes="(min-width: 1024px) 33vw, 100vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -187,8 +189,9 @@ export default async function HomePage() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2">
           <div className="relative aspect-square overflow-hidden rounded-3xl">
             <Image
-              src="/images/about-team.png"
+              src="/images/about-team.webp"
               alt="Digital Weavix designers and marketers collaborating around a table of printed proofs"
+              title="The Digital Weavix creative team"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"
@@ -249,7 +252,7 @@ export default async function HomePage() {
               <li key={post.slug}>
                 <article className="group h-full overflow-hidden rounded-2xl border border-border bg-card">
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image src={post.image} alt={post.imageAlt} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <Image src={post.image} alt={post.imageAlt} title={post.title} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <div className="p-6">
                     <p className="text-xs font-semibold uppercase tracking-widest text-primary">{post.category}</p>

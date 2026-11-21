@@ -22,7 +22,7 @@ export const graphicDesign: Service = {
     'affordable graphic design',
     'creative design studio',
   ],
-  heroImage: '/images/graphic-design-hero.png',
+  heroImage: '/images/graphic-design-hero.webp',
   heroAlt: 'Graphic designer sketching logo concepts on a tablet next to printed brand mockups and color swatches',
   quickAnswer:
     'Digital Weavix provides professional graphic design services including custom logo design, complete brand identity systems, packaging design, social media creatives and brochure layouts. Every project includes original concepts, unlimited revisions within scope, and print-ready plus web-ready source files that you fully own.',

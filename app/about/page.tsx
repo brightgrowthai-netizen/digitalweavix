@@ -56,7 +56,7 @@ export default async function AboutPage() {
           </p>
         </div>
         <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-          <Image src="/images/about-team.png" alt="The Digital Weavix team reviewing brand designs and print proofs together" fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+          <Image src="/images/about-team.webp" alt="The Digital Weavix team reviewing brand designs and print proofs together" title="Meet the Digital Weavix team" fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
         </div>
       </section>
       <section aria-labelledby="values-heading" className="bg-muted py-20">

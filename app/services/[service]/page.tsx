@@ -79,7 +79,7 @@ export default async function ServicePage({ params }: Props) {
             </div>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image src={service.heroImage} alt={service.heroAlt} fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            <Image src={service.heroImage} alt={service.heroAlt} title={`${service.name} by Digital Weavix`} fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
           </div>
         </div>
         <div className="mx-auto max-w-7xl px-5 pb-12">

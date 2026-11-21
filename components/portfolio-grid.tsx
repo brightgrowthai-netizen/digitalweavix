@@ -12,8 +12,9 @@ export function PortfolioGrid({ items, headingLevel = 'h3' }: { items: Portfolio
             <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src={item.image}
-                alt={item.alt}
-                fill
+  alt={item.alt}
+  title={`${item.title} | ${item.category} by Digital Weavix`}
+  fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
               />

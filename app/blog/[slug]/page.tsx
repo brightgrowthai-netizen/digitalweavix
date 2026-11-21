@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: Props) {
         </header>
         <div className="mx-auto max-w-5xl px-5">
           <div className="relative aspect-[16/9] overflow-hidden rounded-3xl">
-            <Image src={post.image} alt={post.imageAlt} fill priority sizes="(min-width: 1024px) 64rem, 100vw" className="object-cover" />
+            <Image src={post.image} alt={post.imageAlt} title={post.title} fill priority sizes="(min-width: 1024px) 64rem, 100vw" className="object-cover" />
           </div>
         </div>
         <div className="mx-auto max-w-3xl px-5 py-12">

@@ -29,7 +29,7 @@ export default async function BlogPage() {
             <li key={post.slug}>
               <article className="group h-full overflow-hidden rounded-2xl border border-border bg-card">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image src={post.image} alt={post.imageAlt} fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <Image src={post.image} alt={post.imageAlt} title={post.title} fill sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 </div>
                 <div className="p-6">
                   <p className="text-xs font-semibold uppercase tracking-widest text-primary">

@@ -68,7 +68,7 @@ export default async function SubServicePage({ params }: Props) {
             </div>
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image src={service.heroImage} alt={service.heroAlt} fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+            <Image src={service.heroImage} alt={service.heroAlt} title={`${sub.name} | ${service.name} by Digital Weavix`} fill priority sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
           </div>
         </div>
       </section>

@@ -22,7 +22,7 @@ export const digitalMarketing: Service = {
     'content marketing services',
     'online marketing for small business',
   ],
-  heroImage: '/images/digital-marketing-hero.png',
+  heroImage: '/images/digital-marketing-hero.webp',
   heroAlt: 'Digital marketing strategist reviewing rising growth charts on a laptop and social posts on a phone',
   quickAnswer:
     'Digital Weavix is a digital marketing agency offering SEO, local SEO, Generative Engine Optimization (GEO), social media marketing, Google Ads and Meta Ads management, and content marketing. We focus on measurable outcomes such as rankings, qualified traffic, leads and sales, with transparent monthly reports.',

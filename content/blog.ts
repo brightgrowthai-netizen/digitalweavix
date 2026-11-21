@@ -12,7 +12,7 @@ export const posts: BlogPost[] = [
     publishedAt: '2026-09-04',
     updatedAt: '2026-11-10',
     readingMinutes: 6,
-    image: '/images/graphic-design-hero.png',
+    image: '/images/graphic-design-hero.webp',
     imageAlt: 'Designer sketching logo concepts on a tablet',
     keyTakeaways: [
       'Logo pricing is driven by research depth, number of concepts, revisions and extra brand assets.',
@@ -57,7 +57,7 @@ export const posts: BlogPost[] = [
     publishedAt: '2026-10-02',
     updatedAt: '2026-11-15',
     readingMinutes: 7,
-    image: '/images/portfolio/local-seo.png',
+    image: '/images/portfolio/local-seo.webp',
     imageAlt: 'Smartphone showing a local map pin with reviews',
     keyTakeaways: [
       'Google ranks local businesses by relevance, distance and prominence.',
@@ -101,7 +101,7 @@ export const posts: BlogPost[] = [
     publishedAt: '2026-08-18',
     updatedAt: '2026-11-01',
     readingMinutes: 5,
-    image: '/images/portfolio/business-cards.png',
+    image: '/images/portfolio/business-cards.webp',
     imageAlt: 'Luxury business cards with gold foil',
     keyTakeaways: [
       '350gsm is the professional standard; 600gsm+ feels luxurious.',
