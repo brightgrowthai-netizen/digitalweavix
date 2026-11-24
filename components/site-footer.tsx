@@ -108,7 +108,7 @@ export function SiteFooter() {
                 <ul className="mt-2 flex flex-col gap-1.5 pl-3 text-secondary-foreground/70">
                   {service.subservices.map((sub) => (
                     <li key={sub.slug}>
-                      <Link href={`/services/${service.slug}#${sub.slug}`} className="hover:text-primary">
+                      <Link href={`/services/${service.slug}/${sub.slug}`} className="hover:text-primary">
                         {sub.name}
                       </Link>
                     </li>
