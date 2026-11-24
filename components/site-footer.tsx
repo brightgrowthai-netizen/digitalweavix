@@ -58,6 +58,7 @@ export async function SiteFooter() {
             {'\u00A9'} {year} {siteConfig.name}. All rights reserved.
           </p>
           <ul className="flex flex-wrap gap-5">
+            <li><Link href="/services" className="hover:text-primary">Services</Link></li>
             <li><Link href="/about" className="hover:text-primary">About</Link></li>
             <li><Link href="/portfolio" className="hover:text-primary">Portfolio</Link></li>
             <li><Link href="/blog" className="hover:text-primary">Blog</Link></li>
