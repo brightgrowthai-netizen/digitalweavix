@@ -3,7 +3,6 @@ import type { Service } from '../types'
 export const digitalMarketing: Service = {
   slug: 'digital-marketing',
   name: 'Digital Marketing',
-  pageTitle: 'SEO',
   icon: 'megaphone',
   tagline: 'More visibility. More clicks. More customers.',
   shortDescription:

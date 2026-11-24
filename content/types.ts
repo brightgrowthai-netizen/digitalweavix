@@ -21,7 +21,6 @@ export type ServiceIcon = 'palette' | 'printer' | 'megaphone'
 export type Service = {
   slug: string
   name: string
-  pageTitle?: string
   icon: ServiceIcon
   tagline: string
   shortDescription: string

@@ -68,7 +68,7 @@ export default async function ServicePage({ params }: Props) {
             <span className="mt-8 flex size-14 items-center justify-center rounded-2xl bg-accent text-accent-foreground">
               <ServiceIcon name={service.icon} className="size-7" />
             </span>
-            <h1 className="mt-5 text-balance text-4xl font-bold leading-tight md:text-6xl">{service.pageTitle ?? `${service.name} Services`}</h1>
+            <h1 className="mt-5 text-balance text-4xl font-bold leading-tight md:text-6xl">{service.name} Services</h1>
             <p className="mt-4 font-display text-xl font-medium text-primary">{service.tagline}</p>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted-foreground">{service.shortDescription}</p>
             <div className="mt-8 flex flex-wrap gap-3">
