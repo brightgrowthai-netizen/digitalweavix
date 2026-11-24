@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import { getServices } from '@/lib/cms'
+import { subservicePath } from '@/content/services'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { CtaBand } from '@/components/cta-band'
 
@@ -53,7 +54,7 @@ export default async function ServicesPage() {
                     {service.subservices.map((sub) => (
                       <li key={sub.slug}>
                         <Link
-                          href={`/services/${service.slug}/${sub.slug}`}
+                          href={subservicePath(service, sub)}
                           className="inline-flex items-center gap-2 text-sm font-medium hover:text-primary"
                         >
                           <span className="size-1.5 rounded-full bg-primary" aria-hidden="true" />

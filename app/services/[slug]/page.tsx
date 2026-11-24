@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { CheckCircle2 } from 'lucide-react'
 import { getService, getServices } from '@/lib/cms'
+import { subservicePath } from '@/content/services'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { FaqSection } from '@/components/faq-section'
 import { CtaBand } from '@/components/cta-band'
@@ -76,7 +77,7 @@ export default async function ServicePage({ params }: Props) {
             {service.subservices.map((sub) => (
               <li key={sub.slug} className="rounded-2xl border border-border bg-card p-8">
                 <h3 className="text-2xl font-bold">
-                  <Link href={`/services/${service.slug}/${sub.slug}`} className="hover:text-primary">
+                  <Link href={subservicePath(service, sub)} className="hover:text-primary">
                     {sub.name}
                   </Link>
                 </h3>
@@ -91,7 +92,7 @@ export default async function ServicePage({ params }: Props) {
                 </ul>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
-                    href={`/services/${service.slug}/${sub.slug}`}
+                    href={subservicePath(service, sub)}
                     className="inline-flex h-11 items-center rounded-full px-5 font-semibold text-primary hover:underline"
                   >
                     Learn more

@@ -1,4 +1,4 @@
-import { services } from './services'
+import { services, subservicePath } from './services'
 
 export type NavItem = { name: string; href: string; children?: NavItem[] }
 
@@ -7,7 +7,11 @@ const servicesNav: NavItem[] = services.map((service) => ({
   href: `/services/${service.slug}`,
   children: service.subservices.map((sub) => ({
     name: sub.name,
-    href: `/services/${service.slug}/${sub.slug}`,
+    href: subservicePath(service, sub),
+    children: sub.children?.map((child) => ({
+      name: child.name,
+      href: `/services/${service.slug}/${sub.slug}/${child.slug}`,
+    })),
   })),
 }))
 
