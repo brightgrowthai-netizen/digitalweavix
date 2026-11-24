@@ -75,6 +75,47 @@ export const digitalMarketing: Service = {
       ],
     },
     {
+      slug: 'programmatic-seo',
+      name: 'Programmatic SEO',
+      shortDescription: 'Template-driven landing pages generated at scale to capture thousands of long-tail searches.',
+      metaTitle: 'Programmatic SEO Services | Scalable Landing Pages Agency',
+      metaDescription:
+        'Scale organic traffic with Digital Weavix programmatic SEO: keyword pattern research, data-driven page templates, internal linking, schema and quality controls that capture thousands of long-tail searches.',
+      keywords: [
+        'programmatic seo',
+        'programmatic seo services',
+        'programmatic seo agency',
+        'seo at scale',
+        'template landing pages',
+        'long tail keyword pages',
+        'location pages seo',
+      ],
+      quickAnswer:
+        'Programmatic SEO is the practice of building hundreds or thousands of search-optimized pages from structured data and a proven page template, so each page targets a specific long-tail keyword such as "[service] in [city]" or "[product] vs [product]". Our service covers keyword pattern research, data sourcing, template design, internal linking, schema markup and quality controls.',
+      intro:
+        'Some businesses have thousands of valuable searches hiding in repeatable patterns: services by city, products by category, comparisons, integrations and directories. We turn those patterns into a scalable page system that is genuinely useful to visitors, fast, crawlable and safe from thin-content penalties.',
+      benefits: [
+        { title: 'Capture long-tail demand', description: 'Rank for thousands of specific, high-intent searches that are too many to write by hand.' },
+        { title: 'Quality at scale', description: 'Unique data, helpful content blocks and quality thresholds keep pages valuable, not thin.' },
+        { title: 'Technical foundation', description: 'Clean URLs, XML sitemaps, canonical tags, internal linking and crawl-budget management.' },
+        { title: 'Compounding returns', description: 'One template investment keeps generating traffic and leads as pages are indexed and mature.' },
+      ],
+      deliverables: [
+        'Keyword pattern and opportunity research',
+        'Data source and dataset preparation',
+        'Page template and content block design',
+        'Dynamic metadata, schema and FAQ markup',
+        'Internal linking and sitemap architecture',
+        'Indexation monitoring and performance reports',
+      ],
+      faqs: [
+        { question: 'What is programmatic SEO?', answer: 'Programmatic SEO creates many landing pages from a shared template and structured data, with each page targeting a distinct long-tail keyword. Examples include location pages, comparison pages, directories and integration pages.' },
+        { question: 'Is programmatic SEO safe with Google?', answer: 'Yes, when every page offers unique, genuinely useful information. Google penalizes low-quality, near-duplicate pages, so we set quality thresholds, add unique data per page and only publish pages that deserve to rank.' },
+        { question: 'What kind of business benefits most?', answer: 'Businesses with repeatable search patterns benefit most, such as multi-location services, marketplaces, SaaS tools with many integrations, travel, real estate and e-commerce catalogs.' },
+        { question: 'How long until programmatic SEO pages rank?', answer: 'Indexing usually begins within weeks, and meaningful traffic growth typically appears within 3 to 6 months depending on domain authority, competition and data quality.' },
+      ],
+    },
+    {
       slug: 'ai-search-optimization',
       name: 'AI Search Optimization',
       shortDescription: 'Get your brand cited in ChatGPT, Gemini, Perplexity and Google AI Overviews.',
