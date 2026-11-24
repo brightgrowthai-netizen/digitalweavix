@@ -1,19 +1,17 @@
 import Link from 'next/link'
 import { Clock, Mail, MessageCircle } from 'lucide-react'
-import { getServices } from '@/lib/cms'
 import { siteConfig, whatsappLink } from '@/content/site'
 import { Logo } from './logo'
 
-export async function SiteFooter() {
-  const services = await getServices()
+export function SiteFooter() {
   const year = new Date().getFullYear()
 
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-2 lg:grid-cols-5">
-        <div className="lg:col-span-2">
+      <div className="mx-auto max-w-7xl px-5 py-16">
+        <div className="max-w-md">
           <Logo inverted />
-          <p className="mt-5 max-w-sm leading-relaxed text-secondary-foreground/75">{siteConfig.description}</p>
+          <p className="mt-5 leading-relaxed text-secondary-foreground/75">{siteConfig.description}</p>
           <ul className="mt-6 flex flex-col gap-3 text-sm">
             <li>
               <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary">
@@ -33,24 +31,6 @@ export async function SiteFooter() {
             </li>
           </ul>
         </div>
-        {services.map((service) => (
-          <div key={service.slug}>
-            <h2 className="font-display text-base font-semibold">
-              <Link href={`/services/${service.slug}`} className="hover:text-primary">
-                {service.name}
-              </Link>
-            </h2>
-            <ul className="mt-4 flex flex-col gap-2.5 text-sm text-secondary-foreground/75">
-              {service.subServices.map((sub) => (
-                <li key={sub.slug}>
-                  <Link href={`/services/${service.slug}/${sub.slug}`} className="hover:text-primary">
-                    {sub.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
       </div>
       <div className="border-t border-secondary-foreground/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-5 py-6 text-sm text-secondary-foreground/60 md:flex-row">

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import { Clock, Mail, MessageCircle, Zap } from 'lucide-react'
+import { Clock, Mail, Zap } from 'lucide-react'
 import { siteConfig } from '@/content/site'
-import { getServices } from '@/lib/cms'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { FaqSection } from '@/components/faq-section'
@@ -30,13 +29,12 @@ const faqs: FAQ[] = [
   },
 ]
 
-export default async function ContactPage() {
-  const services = await getServices()
+export default function ContactPage() {
   return (
     <>
       <section className="mx-auto max-w-7xl px-5 pb-16 pt-8 md:pt-12">
         <Breadcrumbs items={[{ name: 'Contact', href: '/contact' }]} />
-        <div className="mt-8 grid gap-12 lg:grid-cols-[1.2fr_1fr]">
+        <div className="mt-8 max-w-3xl">
           <div>
             <h1 className="text-balance text-4xl font-bold md:text-6xl">Skip the forms. Chat with us on WhatsApp.</h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
@@ -50,24 +48,6 @@ export default async function ContactPage() {
                 <Mail className="size-5 text-primary" aria-hidden="true" />
                 <a href={`mailto:${siteConfig.email}`} className="hover:text-primary">{siteConfig.email}</a>
               </li>
-            </ul>
-          </div>
-          <div className="rounded-3xl bg-secondary p-8 text-secondary-foreground">
-            <h2 className="flex items-center gap-2 text-2xl font-bold">
-              <MessageCircle className="size-6 text-primary" aria-hidden="true" />
-              Start a chat about
-            </h2>
-            <ul className="mt-6 flex flex-col gap-3">
-              {services.flatMap((s) => s.subServices.slice(0, 3).map((sub) => ({ service: s, sub }))).map(({ sub }) => (
-                <li key={sub.slug}>
-                  <WhatsAppButton
-                    variant="light"
-                    className="w-full justify-start"
-                    label={sub.name}
-                    message={`Hi Digital Weavix, I'd like a free quote for ${sub.name.toLowerCase()}.`}
-                  />
-                </li>
-              ))}
             </ul>
           </div>
         </div>

@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, BadgeCheck, Layers, Rocket, ShieldCheck, Star } from 'lucide-react'
-import { getPortfolio, getPosts, getServices, getTestimonials } from '@/lib/cms'
+import { getPortfolio, getPosts, getTestimonials } from '@/lib/cms'
 import { siteConfig } from '@/content/site'
 import { WhatsAppButton } from '@/components/whatsapp-button'
 import { SectionHeading } from '@/components/section-heading'
-import { ServiceIcon } from '@/components/service-icon'
 import { PortfolioGrid } from '@/components/portfolio-grid'
 import { Testimonials } from '@/components/testimonials'
 import { FaqSection } from '@/components/faq-section'
@@ -58,8 +57,7 @@ const reasons = [
 ]
 
 export default async function HomePage() {
-  const [services, portfolio, testimonials, posts] = await Promise.all([
-    getServices(),
+  const [portfolio, testimonials, posts] = await Promise.all([
     getPortfolio(),
     getTestimonials(),
     getPosts(),
@@ -126,61 +124,6 @@ export default async function HomePage() {
           <strong>printing</strong> (business cards, flyers, banners, merchandise) and <strong>digital marketing</strong>{' '}
           (SEO, social media, Google and Meta Ads). Get a free quote on WhatsApp in minutes.
         </QuickAnswer>
-      </section>
-
-      <section aria-labelledby="services-heading" className="py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-5">
-          <SectionHeading
-            id="services-heading"
-            eyebrow="What we do"
-            title="Three services. One brand that wins."
-            description="Pick one service or combine all three. Everything we create works together to make your business look premium and sell more."
-          />
-          <ul className="mt-14 grid gap-6 lg:grid-cols-3">
-            {services.map((service) => (
-              <li key={service.slug}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-border bg-card">
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={service.heroImage}
-                      alt={service.heroAlt}
-                      fill
-                      sizes="(min-width: 1024px) 33vw, 100vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col p-7">
-                    <span className="flex size-12 items-center justify-center rounded-xl bg-accent text-accent-foreground">
-                      <ServiceIcon name={service.icon} className="size-6" />
-                    </span>
-                    <h3 className="mt-5 text-2xl font-bold">
-                      <Link href={`/services/${service.slug}`} className="after:absolute after:inset-0 relative">
-                        {service.name}
-                      </Link>
-                    </h3>
-                    <p className="mt-3 leading-relaxed text-muted-foreground">{service.shortDescription}</p>
-                    <ul className="mt-5 flex flex-wrap gap-2">
-                      {service.subServices.slice(0, 5).map((sub) => (
-                        <li key={sub.slug}>
-                          <Link
-                            href={`/services/${service.slug}/${sub.slug}`}
-                            className="relative z-10 inline-block rounded-full bg-muted px-3 py-1 text-xs font-medium hover:bg-primary hover:text-primary-foreground"
-                          >
-                            {sub.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="mt-auto flex items-center gap-2 pt-6 font-semibold text-primary">
-                      Explore {service.name.toLowerCase()}
-                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                    </p>
-                  </div>
-                </article>
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
 
       <section aria-labelledby="why-heading" className="bg-muted py-20 md:py-28">

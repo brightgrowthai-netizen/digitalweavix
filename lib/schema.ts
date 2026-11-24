@@ -1,5 +1,5 @@
 import { absoluteUrl, siteConfig } from '@/content/site'
-import type { BlogPost, FAQ, Service, SubService } from '@/content/types'
+import type { BlogPost, FAQ } from '@/content/types'
 
 const orgId = `${siteConfig.url}/#organization`
 
@@ -93,49 +93,6 @@ export function faqSchema(faqs: FAQ[]) {
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
     })),
-  }
-}
-
-export function serviceSchema(service: Service) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${absoluteUrl(`/services/${service.slug}`)}#service`,
-    name: service.name,
-    serviceType: service.name,
-    description: service.metaDescription,
-    url: absoluteUrl(`/services/${service.slug}`),
-    image: absoluteUrl(service.heroImage),
-    provider: { '@id': orgId },
-    areaServed: siteConfig.areaServed,
-    hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: `${service.name} services`,
-      itemListElement: service.subServices.map((sub) => ({
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: sub.name,
-          description: sub.shortDescription,
-          url: absoluteUrl(`/services/${service.slug}/${sub.slug}`),
-        },
-      })),
-    },
-  }
-}
-
-export function subServiceSchema(service: Service, sub: SubService, path: string) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: sub.name,
-    serviceType: sub.name,
-    category: service.name,
-    description: sub.metaDescription,
-    url: absoluteUrl(path),
-    provider: { '@id': orgId },
-    areaServed: siteConfig.areaServed,
-    isRelatedTo: { '@id': `${absoluteUrl(`/services/${service.slug}`)}#service` },
   }
 }
 
