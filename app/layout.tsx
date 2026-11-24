@@ -6,6 +6,7 @@ import { SiteFooter } from '@/components/site-footer'
 import { WhatsAppFloat } from '@/components/whatsapp-float'
 import { JsonLd } from '@/components/json-ld'
 import { organizationSchema, websiteSchema } from '@/lib/schema'
+import { getServices } from '@/lib/cms'
 import { siteConfig } from '@/content/site'
 import './globals.css'
 
@@ -73,7 +74,9 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const services = await getServices()
+
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="antialiased">
@@ -84,7 +87,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           Skip to content
         </a>
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
-        <SiteHeader />
+        <SiteHeader services={services} />
         <main id="main">{children}</main>
         <SiteFooter />
         <WhatsAppFloat />
