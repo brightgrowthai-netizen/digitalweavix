@@ -75,6 +75,47 @@ export const digitalMarketing: Service = {
       ],
     },
     {
+      slug: 'ai-search-optimization',
+      name: 'AI Search Optimization',
+      shortDescription: 'Get your brand cited in ChatGPT, Gemini, Perplexity and Google AI Overviews.',
+      metaTitle: 'AI Search Optimization Services | GEO & AEO Agency',
+      metaDescription:
+        'Get cited in AI answers with Digital Weavix AI search optimization: Generative Engine Optimization (GEO), answer engine optimization, entity SEO and structured data for ChatGPT, Gemini and Google AI Overviews.',
+      keywords: [
+        'ai search optimization',
+        'generative engine optimization',
+        'geo services',
+        'answer engine optimization',
+        'ai overviews optimization',
+        'chatgpt seo',
+        'llm seo',
+      ],
+      quickAnswer:
+        'AI search optimization makes your business easy for AI assistants and AI-powered search results to understand, trust and cite. Our service combines Generative Engine Optimization (GEO), answer engine optimization (AEO), entity and brand signal building, structured data and answer-first content.',
+      intro:
+        'More searches now end with an AI-written answer instead of a list of links. We study how AI assistants choose their sources, then shape your website, content and brand mentions so your business is one of the names they recommend.',
+      benefits: [
+        { title: 'Cited by AI assistants', description: 'Content structured so ChatGPT, Gemini, Perplexity and AI Overviews can quote your business.' },
+        { title: 'Answer-first content', description: 'Clear, direct answers to the questions your customers actually ask.' },
+        { title: 'Stronger brand entity', description: 'Consistent business facts across your site, directories and third-party mentions.' },
+        { title: 'Measurable visibility', description: 'Regular checks on which AI tools mention your brand and for which queries.' },
+      ],
+      deliverables: [
+        'AI visibility audit across major assistants',
+        'Entity and brand signal optimization',
+        'Answer-first page and FAQ restructuring',
+        'Schema markup for AI understanding',
+        'Citation-worthy content creation',
+        'Monthly AI visibility report',
+      ],
+      faqs: [
+        { question: 'What is AI search optimization?', answer: 'AI search optimization prepares your website and brand so AI assistants and AI-generated search results can find, understand and cite your business when people ask questions.' },
+        { question: 'How is it different from traditional SEO?', answer: 'Traditional SEO focuses on ranking pages in search results. AI search optimization also focuses on being quoted inside AI-generated answers, which depends on clear entities, direct answers, structured data and trusted mentions.' },
+        { question: 'Can you guarantee my business will be cited by ChatGPT?', answer: 'No agency can guarantee a specific AI answer, because AI platforms change their sources and models frequently. We guarantee transparent work, proven methods and regular reporting on your AI visibility.' },
+        { question: 'Is AI search optimization included in SEO plans?', answer: 'Yes. Our SEO plans include GEO work, and AI search optimization can be added to any digital marketing plan for businesses that want stronger AI visibility.' },
+      ],
+    },
+    {
       slug: 'local-seo',
       name: 'Local SEO & Google Business Profile',
       shortDescription: 'Dominate the Google Map Pack and "near me" searches in your city.',
