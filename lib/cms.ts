@@ -26,6 +26,12 @@ export async function getSubService(serviceSlug: string, subSlug: string) {
   return service && subService ? { service, subService } : undefined
 }
 
+export async function getNestedSubService(serviceSlug: string, subSlug: string, childSlug: string) {
+  const result = await getSubService(serviceSlug, subSlug)
+  const subService = result?.subService.children?.find((child) => child.slug === childSlug)
+  return result && subService ? { service: result.service, parent: result.subService, subService } : undefined
+}
+
 export async function getPortfolio(serviceSlug?: string) {
   return serviceSlug ? portfolio.filter((item) => item.service === serviceSlug) : portfolio
 }

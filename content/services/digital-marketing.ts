@@ -72,6 +72,33 @@ export const digitalMarketing: Service = {
         { question: 'How long does it take to see results?', answer: 'Tracking and quick fixes often show impact within a few weeks. A/B tests usually need several weeks of data before we confirm a winner.' },
         { question: 'Do you need access to my website and ad accounts?', answer: 'Yes, we need read and edit access to your website analytics, ad accounts and tag manager so we can measure and test changes safely.' },
       ],
+      children: [
+        {
+          slug: 'seo',
+          name: 'SEO',
+          shortDescription: 'Technical, on-page and content SEO that helps your business rank for the buyer-intent searches that bring in customers.',
+          metaTitle: 'SEO Services That Grow Organic Traffic | Digital Weavix',
+          metaDescription:
+            'Rank higher on Google with Digital Weavix. Technical SEO, on-page optimization, content planning and monthly ranking reports. Get a free SEO audit on WhatsApp.',
+          keywords: ['seo services', 'seo agency', 'technical seo', 'on-page seo', 'seo audit'],
+          quickAnswer:
+            'Digital Weavix provides SEO services covering technical fixes, on-page optimization and content planning, with monthly reports on keyword rankings, organic traffic and leads.',
+          intro:
+            'Most buyers start their search on Google. SEO makes sure your website appears when they look for what you sell, so you earn visits that do not cost a fee for every click.',
+          benefits: [
+            { title: 'Solid technical foundation', description: 'Crawling, indexing, page speed and site structure fixed so search engines can read your pages.' },
+            { title: 'Pages that match intent', description: 'Titles, headings and internal links aligned with the searches your buyers actually make.' },
+            { title: 'Content that ranks', description: 'Articles and service pages planned around priority keywords and the questions customers ask.' },
+            { title: 'Measurable progress', description: 'Monthly reports on rankings, organic traffic and enquiries, with no vanity metrics.' },
+          ],
+          deliverables: ['Free SEO audit', 'Keyword research and priority list', 'Technical SEO fixes', 'On-page optimization for key pages', 'Content plan and article briefs', 'Monthly ranking and traffic report'],
+          faqs: [
+            { question: 'How long does SEO take to work?', answer: 'Most websites see early movement within a few months. Competitive keywords take longer, so we set realistic milestones in your 90-day roadmap.' },
+            { question: 'What is the difference between SEO and Google Ads?', answer: 'SEO earns organic rankings over time without paying for each click. Google Ads places paid results immediately. Many businesses use both, and we can plan them together.' },
+            { question: 'What access do you need to my website?', answer: 'We need access to your website platform or hosting, Google Search Console and analytics so we can audit the site and make changes.' },
+          ],
+        },
+      ],
     },
   ],
   faqs: [
