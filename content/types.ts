@@ -36,8 +36,11 @@ export type Testimonial = {
 export type Subservice = {
   slug: string
   name: string
+  title: string
   description: string
+  quickAnswer: string
   points: string[]
+  faqs: FAQ[]
 }
 
 export type Service = {

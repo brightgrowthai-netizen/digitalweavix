@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { CheckCircle2 } from 'lucide-react'
 import { getService, getServices } from '@/lib/cms'
@@ -73,8 +74,12 @@ export default async function ServicePage({ params }: Props) {
           />
           <ul className="mt-12 grid gap-6 md:grid-cols-2">
             {service.subservices.map((sub) => (
-              <li key={sub.slug} id={sub.slug} className="scroll-mt-24 rounded-2xl border border-border bg-card p-8">
-                <h3 className="text-2xl font-bold">{sub.name}</h3>
+              <li key={sub.slug} className="rounded-2xl border border-border bg-card p-8">
+                <h3 className="text-2xl font-bold">
+                  <Link href={`/services/${service.slug}/${sub.slug}`} className="hover:text-primary">
+                    {sub.name}
+                  </Link>
+                </h3>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{sub.description}</p>
                 <ul className="mt-6 flex flex-col gap-2.5">
                   {sub.points.map((point) => (
@@ -84,12 +89,19 @@ export default async function ServicePage({ params }: Props) {
                     </li>
                   ))}
                 </ul>
-                <WhatsAppButton
-                  className="mt-8"
-                  variant="outline"
-                  label={`Quote for ${sub.name}`}
-                  message={`Hi Digital Weavix, I'd like a quote for ${sub.name}.`}
-                />
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link
+                    href={`/services/${service.slug}/${sub.slug}`}
+                    className="inline-flex h-11 items-center rounded-full px-5 font-semibold text-primary hover:underline"
+                  >
+                    Learn more
+                  </Link>
+                  <WhatsAppButton
+                    variant="outline"
+                    label={`Quote for ${sub.name}`}
+                    message={`Hi Digital Weavix, I'd like a quote for ${sub.name}.`}
+                  />
+                </div>
               </li>
             ))}
           </ul>

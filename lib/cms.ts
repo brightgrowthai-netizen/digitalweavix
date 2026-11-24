@@ -31,3 +31,10 @@ export async function getServices() {
 export async function getService(slug: string) {
   return services.find((service) => service.slug === slug)
 }
+
+export async function getSubservice(serviceSlug: string, subSlug: string) {
+  const service = services.find((item) => item.slug === serviceSlug)
+  const subservice = service?.subservices.find((item) => item.slug === subSlug)
+  if (!service || !subservice) return undefined
+  return { service, subservice }
+}

@@ -7,7 +7,7 @@ const servicesNav: NavItem[] = services.map((service) => ({
   href: `/services/${service.slug}`,
   children: service.subservices.map((sub) => ({
     name: sub.name,
-    href: `/services/${service.slug}#${sub.slug}`,
+    href: `/services/${service.slug}/${sub.slug}`,
   })),
 }))
 
