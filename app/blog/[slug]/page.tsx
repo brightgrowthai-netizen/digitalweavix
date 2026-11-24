@@ -1,15 +1,13 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { CheckCircle2 } from 'lucide-react'
-import { getPost, getPosts, getService } from '@/lib/cms'
+import { getPost, getPosts } from '@/lib/cms'
 import { articleSchema } from '@/lib/schema'
 import { JsonLd } from '@/components/json-ld'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 import { FaqSection } from '@/components/faq-section'
 import { CtaBand } from '@/components/cta-band'
-import { WhatsAppButton } from '@/components/whatsapp-button'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -44,7 +42,6 @@ export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params
   const post = await getPost(slug)
   if (!post) notFound()
-  const service = await getService(post.service)
 
   return (
     <>
@@ -98,18 +95,6 @@ export default async function BlogPostPage({ params }: Props) {
               ))}
             </section>
           ))}
-          {service && (
-            <div className="mt-14 rounded-3xl bg-secondary p-8 text-secondary-foreground">
-              <h2 className="text-2xl font-bold">Need help with {service.name.toLowerCase()}?</h2>
-              <p className="mt-3 leading-relaxed text-secondary-foreground/80">{service.shortDescription}</p>
-              <div className="mt-6 flex flex-wrap items-center gap-4">
-                <WhatsAppButton label="Get a free quote" />
-                <Link href={`/services/${service.slug}`} className="font-semibold text-primary hover:underline">
-                  Explore our {service.name.toLowerCase()} services
-                </Link>
-              </div>
-            </div>
-          )}
         </div>
       </article>
       <FaqSection faqs={post.faqs} title="Related questions" />
