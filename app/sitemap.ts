@@ -13,12 +13,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
   const servicePages = services.flatMap((s) => [
     { url: absoluteUrl(`/services/${s.slug}`), lastModified: now, changeFrequency: 'weekly' as const, priority: 0.95 },
-    ...s.subServices.map((sub) => ({
-      url: absoluteUrl(`/services/${s.slug}/${sub.slug}`),
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.85,
-    })),
+    ...s.subServices.flatMap((sub) => [
+      { url: absoluteUrl(`/services/${s.slug}/${sub.slug}`), lastModified: now, changeFrequency: 'monthly' as const, priority: 0.85 },
+      ...(sub.children ?? []).map((child) => ({
+        url: absoluteUrl(`/services/${s.slug}/${sub.slug}/${child.slug}`),
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+      })),
+    ]),
   ])
   const postPages = posts.map((p) => ({
     url: absoluteUrl(`/blog/${p.slug}`),

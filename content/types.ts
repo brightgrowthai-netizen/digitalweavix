@@ -14,6 +14,7 @@ export type SubService = {
   benefits: Feature[]
   deliverables: string[]
   faqs: FAQ[]
+  children?: SubService[]
 }
 
 export type ServiceIcon = 'palette' | 'printer' | 'megaphone'

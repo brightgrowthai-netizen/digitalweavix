@@ -124,7 +124,7 @@ export function serviceSchema(service: Service) {
   }
 }
 
-export function subServiceSchema(service: Service, sub: SubService) {
+export function subServiceSchema(service: Service, sub: SubService, path: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -132,7 +132,7 @@ export function subServiceSchema(service: Service, sub: SubService) {
     serviceType: sub.name,
     category: service.name,
     description: sub.metaDescription,
-    url: absoluteUrl(`/services/${service.slug}/${sub.slug}`),
+    url: absoluteUrl(path),
     provider: { '@id': orgId },
     areaServed: siteConfig.areaServed,
     isRelatedTo: { '@id': `${absoluteUrl(`/services/${service.slug}`)}#service` },
