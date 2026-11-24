@@ -18,12 +18,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.9,
   }))
   const subservicePages = services.flatMap((service) =>
-    service.subservices.map((sub) => ({
-      url: absoluteUrl(`/services/${service.slug}/${sub.slug}`),
-      lastModified: now,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    })),
+    service.subservices
+      .filter((sub) => !sub.href)
+      .flatMap((sub) => [
+        {
+          url: absoluteUrl(`/services/${service.slug}/${sub.slug}`),
+          lastModified: now,
+          changeFrequency: 'weekly' as const,
+          priority: 0.8,
+        },
+        ...(sub.children ?? []).map((child) => ({
+          url: absoluteUrl(`/services/${service.slug}/${sub.slug}/${child.slug}`),
+          lastModified: now,
+          changeFrequency: 'weekly' as const,
+          priority: 0.8,
+        })),
+      ]),
   )
   const postPages = posts.map((p) => ({
     url: absoluteUrl(`/blog/${p.slug}`),

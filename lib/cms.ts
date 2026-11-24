@@ -35,6 +35,13 @@ export async function getService(slug: string) {
 export async function getSubservice(serviceSlug: string, subSlug: string) {
   const service = services.find((item) => item.slug === serviceSlug)
   const subservice = service?.subservices.find((item) => item.slug === subSlug)
-  if (!service || !subservice) return undefined
+  if (!service || !subservice || subservice.href) return undefined
   return { service, subservice }
+}
+
+export async function getChildSubservice(serviceSlug: string, subSlug: string, childSlug: string) {
+  const match = await getSubservice(serviceSlug, subSlug)
+  const child = match?.subservice.children?.find((item) => item.slug === childSlug)
+  if (!match || !child) return undefined
+  return { ...match, parent: match.subservice, child }
 }

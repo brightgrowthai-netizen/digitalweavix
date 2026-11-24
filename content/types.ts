@@ -41,6 +41,8 @@ export type Subservice = {
   quickAnswer: string
   points: string[]
   faqs: FAQ[]
+  children?: Subservice[]
+  href?: string
 }
 
 export type Service = {

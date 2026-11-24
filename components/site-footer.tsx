@@ -2,7 +2,7 @@ import Link from 'next/link'
 import type { ComponentType, ReactNode } from 'react'
 import { Clock, Mail, MessageCircle } from 'lucide-react'
 import { siteConfig, whatsappLink } from '@/content/site'
-import { services } from '@/content/services'
+import { services, subservicePath } from '@/content/services'
 import { Logo } from './logo'
 
 type IconProps = { className?: string; 'aria-hidden'?: boolean }
@@ -108,7 +108,7 @@ export function SiteFooter() {
                 <ul className="mt-2 flex flex-col gap-1.5 pl-3 text-secondary-foreground/70">
                   {service.subservices.map((sub) => (
                     <li key={sub.slug}>
-                      <Link href={`/services/${service.slug}/${sub.slug}`} className="hover:text-primary">
+                      <Link href={subservicePath(service, sub)} className="hover:text-primary">
                         {sub.name}
                       </Link>
                     </li>
