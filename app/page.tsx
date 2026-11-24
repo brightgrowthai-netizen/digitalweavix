@@ -76,7 +76,7 @@ export default async function HomePage() {
               Rated 4.9/5 by 150+ growing brands
             </p>
             <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.05] md:text-6xl">
-              Digital Marketing, Graphic Design <span className="text-primary">&amp; Printing</span> Agency
+              Branding <span className="text-primary">&amp; Digital Marketing</span> Agency in Ahmedabad
             </h1>
             <p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
               {siteConfig.tagline} Digital Weavix builds your brand, prints it beautifully and puts it in front of the
