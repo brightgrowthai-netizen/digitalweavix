@@ -47,60 +47,7 @@ export const digitalMarketing: Service = {
     { value: '-38%', label: 'Average cost per lead' },
     { value: '1,200+', label: 'Page-one keywords won' },
   ],
-  subServices: [
-    {
-      slug: 'optimization',
-      name: 'Optimization',
-      shortDescription: 'Conversion rate optimization and ongoing campaign tuning that turn more of your existing traffic into leads and sales.',
-      metaTitle: 'Conversion Rate Optimization Services | Digital Weavix',
-      metaDescription:
-        'Improve conversions with Digital Weavix. Landing page testing, funnel analysis, ad campaign tuning and WhatsApp lead tracking to lower your cost per lead. Free audit on WhatsApp.',
-      keywords: ['conversion rate optimization', 'cro services', 'landing page optimization', 'ad campaign optimization', 'lead generation optimization'],
-      quickAnswer:
-        'Digital Weavix optimizes websites, landing pages and paid campaigns using A/B tests, funnel analysis and conversion tracking, with monthly reports on leads, enquiries and cost per lead.',
-      intro:
-        'Getting visitors is only half the job. Optimization finds where people drop off, tests better pages and offers, and tunes your ads so the traffic you already pay for produces more enquiries and sales.',
-      benefits: [
-        { title: 'Higher conversion rate', description: 'Data-led changes to headlines, layouts, forms and calls to action.' },
-        { title: 'Lower cost per lead', description: 'Campaigns refined to spend more on the keywords and audiences that convert.' },
-        { title: 'Clear tracking', description: 'Form fills, WhatsApp clicks and calls tracked so you know what works.' },
-        { title: 'Continuous testing', description: 'Every month we test, learn and roll out the winning variations.' },
-      ],
-      deliverables: ['Conversion tracking setup', 'Funnel and heatmap analysis', 'Landing page A/B testing', 'Ad campaign tuning', 'WhatsApp and form lead tracking', 'Monthly optimization report'],
-      faqs: [
-        { question: 'What is conversion rate optimization?', answer: 'It is the process of improving the share of visitors who take a desired action, such as filling a form or sending a WhatsApp message, without necessarily buying more traffic.' },
-        { question: 'How long does it take to see results?', answer: 'Tracking and quick fixes often show impact within a few weeks. A/B tests usually need several weeks of data before we confirm a winner.' },
-        { question: 'Do you need access to my website and ad accounts?', answer: 'Yes, we need read and edit access to your website analytics, ad accounts and tag manager so we can measure and test changes safely.' },
-      ],
-      children: [
-        {
-          slug: 'seo',
-          name: 'SEO',
-          shortDescription: 'Technical, on-page and content SEO that helps your business rank for the buyer-intent searches that bring in customers.',
-          metaTitle: 'SEO Services That Grow Organic Traffic | Digital Weavix',
-          metaDescription:
-            'Rank higher on Google with Digital Weavix. Technical SEO, on-page optimization, content planning and monthly ranking reports. Get a free SEO audit on WhatsApp.',
-          keywords: ['seo services', 'seo agency', 'technical seo', 'on-page seo', 'seo audit'],
-          quickAnswer:
-            'Digital Weavix provides SEO services covering technical fixes, on-page optimization and content planning, with monthly reports on keyword rankings, organic traffic and leads.',
-          intro:
-            'Most buyers start their search on Google. SEO makes sure your website appears when they look for what you sell, so you earn visits that do not cost a fee for every click.',
-          benefits: [
-            { title: 'Solid technical foundation', description: 'Crawling, indexing, page speed and site structure fixed so search engines can read your pages.' },
-            { title: 'Pages that match intent', description: 'Titles, headings and internal links aligned with the searches your buyers actually make.' },
-            { title: 'Content that ranks', description: 'Articles and service pages planned around priority keywords and the questions customers ask.' },
-            { title: 'Measurable progress', description: 'Monthly reports on rankings, organic traffic and enquiries, with no vanity metrics.' },
-          ],
-          deliverables: ['Free SEO audit', 'Keyword research and priority list', 'Technical SEO fixes', 'On-page optimization for key pages', 'Content plan and article briefs', 'Monthly ranking and traffic report'],
-          faqs: [
-            { question: 'How long does SEO take to work?', answer: 'Most websites see early movement within a few months. Competitive keywords take longer, so we set realistic milestones in your 90-day roadmap.' },
-            { question: 'What is the difference between SEO and Google Ads?', answer: 'SEO earns organic rankings over time without paying for each click. Google Ads places paid results immediately. Many businesses use both, and we can plan them together.' },
-            { question: 'What access do you need to my website?', answer: 'We need access to your website platform or hosting, Google Search Console and analytics so we can audit the site and make changes.' },
-          ],
-        },
-      ],
-    },
-  ],
+  subServices: [],
   faqs: [
     { question: 'What digital marketing services does Digital Weavix provide?', answer: 'We provide SEO, local SEO, Generative Engine Optimization (GEO), social media marketing and management, Google Ads and Meta Ads management, content marketing, copywriting and conversion tracking.' },
     { question: 'How much do digital marketing services cost?', answer: 'We offer monthly plans tailored to your goals and budget, from focused local SEO packages to full multi-channel growth plans. Message us on WhatsApp for a free audit and custom proposal.' },
