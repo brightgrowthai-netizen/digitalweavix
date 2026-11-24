@@ -47,7 +47,33 @@ export const digitalMarketing: Service = {
     { value: '-38%', label: 'Average cost per lead' },
     { value: '1,200+', label: 'Page-one keywords won' },
   ],
-  subServices: [],
+  subServices: [
+    {
+      slug: 'optimization',
+      name: 'Optimization',
+      shortDescription: 'Conversion rate optimization and ongoing campaign tuning that turn more of your existing traffic into leads and sales.',
+      metaTitle: 'Conversion Rate Optimization Services | Digital Weavix',
+      metaDescription:
+        'Improve conversions with Digital Weavix. Landing page testing, funnel analysis, ad campaign tuning and WhatsApp lead tracking to lower your cost per lead. Free audit on WhatsApp.',
+      keywords: ['conversion rate optimization', 'cro services', 'landing page optimization', 'ad campaign optimization', 'lead generation optimization'],
+      quickAnswer:
+        'Digital Weavix optimizes websites, landing pages and paid campaigns using A/B tests, funnel analysis and conversion tracking, with monthly reports on leads, enquiries and cost per lead.',
+      intro:
+        'Getting visitors is only half the job. Optimization finds where people drop off, tests better pages and offers, and tunes your ads so the traffic you already pay for produces more enquiries and sales.',
+      benefits: [
+        { title: 'Higher conversion rate', description: 'Data-led changes to headlines, layouts, forms and calls to action.' },
+        { title: 'Lower cost per lead', description: 'Campaigns refined to spend more on the keywords and audiences that convert.' },
+        { title: 'Clear tracking', description: 'Form fills, WhatsApp clicks and calls tracked so you know what works.' },
+        { title: 'Continuous testing', description: 'Every month we test, learn and roll out the winning variations.' },
+      ],
+      deliverables: ['Conversion tracking setup', 'Funnel and heatmap analysis', 'Landing page A/B testing', 'Ad campaign tuning', 'WhatsApp and form lead tracking', 'Monthly optimization report'],
+      faqs: [
+        { question: 'What is conversion rate optimization?', answer: 'It is the process of improving the share of visitors who take a desired action, such as filling a form or sending a WhatsApp message, without necessarily buying more traffic.' },
+        { question: 'How long does it take to see results?', answer: 'Tracking and quick fixes often show impact within a few weeks. A/B tests usually need several weeks of data before we confirm a winner.' },
+        { question: 'Do you need access to my website and ad accounts?', answer: 'Yes, we need read and edit access to your website analytics, ad accounts and tag manager so we can measure and test changes safely.' },
+      ],
+    },
+  ],
   faqs: [
     { question: 'What digital marketing services does Digital Weavix provide?', answer: 'We provide SEO, local SEO, Generative Engine Optimization (GEO), social media marketing and management, Google Ads and Meta Ads management, content marketing, copywriting and conversion tracking.' },
     { question: 'How much do digital marketing services cost?', answer: 'We offer monthly plans tailored to your goals and budget, from focused local SEO packages to full multi-channel growth plans. Message us on WhatsApp for a free audit and custom proposal.' },
