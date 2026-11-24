@@ -1,6 +1,7 @@
 import 'server-only'
 import { portfolio, testimonials } from '@/content/portfolio'
 import { posts } from '@/content/blog'
+import { services } from '@/content/services'
 
 /**
  * Single content access layer. Every page reads content through these functions,
@@ -21,4 +22,12 @@ export async function getPosts() {
 
 export async function getPost(slug: string) {
   return posts.find((post) => post.slug === slug)
+}
+
+export async function getServices() {
+  return services
+}
+
+export async function getService(slug: string) {
+  return services.find((service) => service.slug === slug)
 }
